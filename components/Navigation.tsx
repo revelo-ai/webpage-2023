@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "@images/logo.svg";
 import React from "react";
+import {useParams, usePathname} from "next/navigation";
+import {i18n} from "@/i18n-config";
 
 const Logo = ({ alt }: { alt: string }) => {
   return <Image src={logo.src} width={119} height={35} alt={alt} priority />;
@@ -35,6 +37,8 @@ const NavLink = ({
 
 export default function Navigation({ dictionary, locale }: any) {
   const [navOpened, setNavOpened] = React.useState(false);
+  const pathname = usePathname();
+  const params = useParams();
 
   return (
     <nav className={navOpened ? "opened" : ""}>
@@ -64,10 +68,10 @@ export default function Navigation({ dictionary, locale }: any) {
         </NavLink>
 
         <div className="country-selector-wrapper">
-          {["sl", "en"].map((l) => (
+          {i18n.locales.map((l) => (
             <NavLink
               key={l}
-              href={`/${l}`}
+              href={pathname.replace(`/${params.locale}`, `/${l}`)}
               setNavOpened={setNavOpened}
               className={l === locale ? "selected" : ""}
             >
