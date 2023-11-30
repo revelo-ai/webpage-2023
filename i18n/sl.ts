@@ -16,7 +16,7 @@ const translations = {
   },
 
   navigation: {
-    cta: "Stopite v stik z nami",
+    cta: "Kontakt",
     aboutUs: "O nas",
     home: "Domov",
     logo: "Revelo logotip",
@@ -154,7 +154,7 @@ const translations = {
 
   form: {
     title: "Stopite v stik z nami",
-    content: "Izpolnite obrazec ali nas kontaktirajte",
+    content: "Izpolnite obrazec ali nam pišite na",
     firstname: "Ime",
     lastname: "Priimek",
     email: "E-pošta",
