@@ -21,7 +21,7 @@ export default function Orange({ dictionary }: { dictionary: ITranslations }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn more
+          {orange.more}
         </a>
 
         <div className="circle top">

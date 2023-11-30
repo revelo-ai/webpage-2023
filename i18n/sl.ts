@@ -147,6 +147,7 @@ const translations = {
 
   orange: {
     title: "Orange data mining",
+    more: "Izvedite več",
     subtitle:
         "Sodelujemo z ekipo, ki razvija Orange, eno najobsežnejših orodij za podatkovno rudarjenje, ki temelji na programskem jeziku Python. Orange združuje vizualno programiranje, interaktivne vizualizacije in strojno učenje v edinstveno platformo za vizualno analitiko. Revelo uporablja Orange za izdelavo prototipov, izvajanje usposabljanj in po potrebi za zagotavljanje rešitev v obliki dodatkov ali prilagojenih izboljšav orodja Orange.",
   },
