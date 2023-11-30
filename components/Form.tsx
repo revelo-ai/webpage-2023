@@ -30,7 +30,7 @@ export default function Form({ dictionary }: { dictionary: ITranslations }) {
             <h2>{form.title}</h2>
 
             <div className="subtitle">
-              {form.content}
+              {form.content}{" "}
               <a href="mailto:info@revelo.bi">info@revelo.bi</a>
             </div>
 

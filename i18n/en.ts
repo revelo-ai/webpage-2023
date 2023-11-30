@@ -154,7 +154,7 @@ const translations = {
 
   form: {
     title: "Get in touch with us",
-    content: "Fill out the form or contact us at ",
+    content: "Fill out the form or contact us at",
     firstname: "First name",
     lastname: "Last name",
     email: "E-mail",
