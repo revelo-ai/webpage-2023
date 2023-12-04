@@ -44,7 +44,7 @@ const translations = {
       },
       {
         content:
-            "Pri našem delu uporabljamo orodje Orange Data Mining, ki ga ne samo razvijamo, temveč aktivno vključujemo v naše predstavitve. V nekaj minutah po pridobitvi podatkov lahko sestavimo prototip, kar je podobno sestavljanju Lego kock. Z orodjem Orange lahko raziskujemo nove zamisli in jih neposredno preizkušamo med sestanki s strankami, pri čemer ni potrebno porabiti časa za kodiranje ali za nadaljnje sestanke.",
+            "Pri našem delu uporabljamo orodje Orange Data Mining, ki ga, ne samo razvijamo, temveč aktivno vključujemo v naše predstavitve. V nekaj minutah po pridobitvi podatkov lahko sestavimo prototip, kar je podobno sestavljanju Lego kock. Z orodjem Orange lahko raziskujemo nove zamisli in jih neposredno preizkušamo med sestanki s strankami, pri čemer ni potrebno porabiti časa za kodiranje ali za nadaljnje sestanke.",
         title: "Izdelava prototipov",
         featureLabels: [
           {
