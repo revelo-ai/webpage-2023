@@ -45,10 +45,10 @@ const translations = {
       {
         content:
             "Pri našem delu uporabljamo orodje Orange Data Mining, ki ga ne samo razvijamo, temveč aktivno vključujemo v naše predstavitve. V nekaj minutah po pridobitvi podatkov lahko sestavimo prototip, kar je podobno sestavljanju Lego kock. Z orodjem Orange lahko raziskujemo nove zamisli in jih neposredno preizkušamo med sestanki s strankami, pri čemer ni potrebno porabiti časa za kodiranje ali za nadaljnje sestanke.",
-        title: "Prototipiranje",
+        title: "Izdelava prototipov",
         featureLabels: [
           {
-            text: "Vizualizacija podatkov med procesom",
+            text: "Sprotna vizualizacija podatkov",
             x: 58,
             y: 28,
           },
@@ -107,9 +107,9 @@ const translations = {
         title: "Razložljiva UI",
       },
       {
-        content:
-            "Uporabljamo prototipe z orodjem Orange Data Mining, da bi skrajšali čas uvajanja na trg, zmanjšali stroške ter omogočili zgodnje vključevanje strank v cikel testiranja in učenja. Naša prototipiranje poteka hitro: poleg lastnih orodij uporabljamo tudi odprtokodne rešitve.",
-        title: "Hitro prototipiranje",
+        content:strank v cikel testiranja in učenja. Naša izdelava prototipov poteka hitro: poleg lastnih orodij uporabljamo tudi odprtokodne rešitve.",
+            "Uporabljamo prototipe z orodjem Orange Data Mining, da bi skrajšali čas uvajanja na trg, zmanjšali stroške ter omogočili zgodnje vključevanje 
+        title: "Hitra izdelava prototipov",
       },
       {
         content:
@@ -124,7 +124,7 @@ const translations = {
         "Revelo je podjetje, specializirano za podatkovno znanost. Z uporabo podatkov strankam pomagamo izboljšati kakovost izdelkov, optimizirati procese in zmanjšati stroške. Podjetja, ki inteligentno uporabljajo svoje podatke, pridobijo prednost pred konkurenco ter hitreje napredujejo.",
     brand: "Revelo.",
     subtitle:
-        "Razložljiva UI. Hitro prototipiranje z orodjem Orange Data Mining. Izobraževanje strank.",
+        "Razložljiva UI. Hitra izdelava prototipov z orodjem Orange Data Mining. Izobraževanje strank.",
     title: "Osvetlimo vaše podatke.",
     cta: {
       title: "Stopite v stik z nami",
