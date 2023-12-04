@@ -6,6 +6,8 @@ import hero from "@images/Property 1=Mobile, Property 2=Hero.png";
 import "../../scss/main.scss";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import React from "react";
+import Script from "next/script";
 
 const montserrat = Montserrat({
   subsets: ["latin-ext"],
@@ -53,6 +55,22 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-8LSPHWPTBY"
+        />
+
+        <Script id="google-analytics">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-8LSPHWPTBY');
+        `}
+        </Script>
+      </head>
       <body className={(inter.className, montserrat.className)}>
         <div className="main-wrapper">
           <Navigation dictionary={dictionary} locale={locale} />
