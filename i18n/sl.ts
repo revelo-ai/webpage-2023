@@ -107,8 +107,8 @@ const translations = {
         title: "Razložljiva UI",
       },
       {
-        content:strank v cikel testiranja in učenja. Naša izdelava prototipov poteka hitro: poleg lastnih orodij uporabljamo tudi odprtokodne rešitve.",
-            "Uporabljamo prototipe z orodjem Orange Data Mining, da bi skrajšali čas uvajanja na trg, zmanjšali stroške ter omogočili zgodnje vključevanje 
+        content:
+            "Uporabljamo prototipe z orodjem Orange Data Mining, da bi skrajšali čas uvajanja na trg, zmanjšali stroške ter omogočili zgodnje vključevanje strank v cikel testiranja in učenja. Naša izdelava prototipov poteka hitro: poleg lastnih orodij uporabljamo tudi odprtokodne rešitve.",
         title: "Hitra izdelava prototipov",
       },
       {
