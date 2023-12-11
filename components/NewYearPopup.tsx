@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import NYCard from "@images/revelo-christmas-2023.webp";
+import NYCard from "@images/revelo-NY-2024.webp";
 
 export function useLocalStorage(key: string) {
   const [show, setShow] = React.useState(false);
@@ -25,7 +25,11 @@ export function useLocalStorage(key: string) {
 
 const NewYearPopup = () => {
   const { show, markAsShown } = useLocalStorage("NYCard2024");
+  const [toLate] = React.useState(new Date().getFullYear() > 2023);
 
+  if (toLate) {
+    return null;
+  }
   return (
     <div className={`overlay ${show ? "" : "hidden-overlay"} `}>
       <div className="popup">
