@@ -1,51 +1,99 @@
 // Abstracts
-@import './abstracts/mixins';
-@import './abstracts/variables';
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
 
 // Helpers
-@import './helpers/reset';
-@import './helpers/helpers';
+@import "./helpers/reset";
+@import "./helpers/helpers";
 
 // Buttons
-@import './buttons/buttons';
+@import "./buttons/buttons";
 
 // Typo
-@import './typography/typography';
+@import "./typography/typography";
 
 // Pages
-@import './pages/contact-us';
+@import "./pages/contact-us";
 
 // Layout
-@import './layout/layout';
+@import "./layout/layout";
 
 // Partials
-@import './partials/navigation';
-@import './partials/advantages';
-@import './partials/services';
-@import './partials/feature-label';
-@import './partials/orange';
-@import './partials/cover';
-@import './partials/footer';
-@import './partials/customer-cases';
-@import './partials/modal';
-@import './partials/testimonials';
-@import './partials/contact-section';
-@import './partials/contact-form';
+@import "./partials/navigation";
+@import "./partials/advantages";
+@import "./partials/services";
+@import "./partials/feature-label";
+@import "./partials/orange";
+@import "./partials/cover";
+@import "./partials/footer";
+@import "./partials/customer-cases";
+@import "./partials/modal";
+@import "./partials/testimonials";
+@import "./partials/contact-section";
+@import "./partials/contact-form";
 
 // Single
-@import './single/contact-completed';
+@import "./single/contact-completed";
 
 html {
-    background: var(--main-background);
-    scroll-behavior: smooth;
+  background: var(--main-background);
+  scroll-behavior: smooth;
 }
 
 body {
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .brand-color {
-    color: var(--brand-color);
+  color: var(--brand-color);
+}
+
+// NY card
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.35);
+  transition: all 0.5s;
+  opacity: 1;
+  z-index: 999;
+}
+
+.hidden-overlay.overlay {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popup {
+  margin: 86px auto 0;
+  border-radius: 5px;
+  width: calc(100% - 40px);
+  max-width: 1420px;
+  position: relative;
+  transition: opacity 1s ease-in-out;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.popup .close {
+  position: absolute;
+  top: -6px;
+  right: 4px;
+  transition: all 200ms;
+  font-size: 46px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 4px;
+  line-height: 1;
+  cursor: pointer;
 }

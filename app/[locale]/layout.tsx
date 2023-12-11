@@ -8,6 +8,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import React from "react";
 import Script from "next/script";
+import NewYearPopup from "@/components/NewYearPopup";
 
 const montserrat = Montserrat({
   subsets: ["latin-ext"],
@@ -77,6 +78,7 @@ export default async function RootLayout({
           {children}
           <Footer dictionary={dictionary} />
         </div>
+        <NewYearPopup />
       </body>
     </html>
   );
