@@ -72,12 +72,16 @@ body {
 .popup {
   margin: 0 auto 0;
   border-radius: 5px;
-  width: calc(100% - 40px);
+  width: calc(100% - 120px);
   max-width: 980px;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   transition: opacity 1s ease-in-out;
+
+  @include respond-to(768) {
+    width: calc(100% - 40px);
+  }
 
   img {
     width: 100%;
