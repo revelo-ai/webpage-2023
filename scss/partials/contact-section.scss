@@ -1,4 +1,13 @@
 .section.section-contact {
-    background: #EAECF5;
-    color: var(--text-color-dark);
+    background: #363f72;
+    color: #fff;
+
+    .contact-form .subtitle {
+        color: rgba(255, 255, 255, 0.8);
+
+        a {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
 }

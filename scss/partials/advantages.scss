@@ -1,64 +1,20 @@
 .section-advantages {
-  &.history {
-    padding-top: 256px;
+  // History (About page) shares this class and keeps the default dark section
+  &.tabbed-list {
+    --tabs-background: rgba(234, 236, 245, 0.85);
+    --tabs-border-color: var(--text-color-medium);
+    --tabs-link-color: #344054;
+
+    background: #eaecf5;
+    color: var(--text-color-dark);
   }
 
   h2 {
-    margin-bottom: 20px;
-  }
-}
+    margin-bottom: 28px;
 
-.advantages-wrapper {
-  display: flex;
-  align-items: center;
-
-  @include respond-to(768) {
-    flex-direction: column;
-  }
-}
-
-.advantages {
-  padding: 96px 0;
-  width: 50%;
-
-  @include respond-to(768) {
-    padding: 66px 0 36px;
-    width: auto;
-  }
-
-  .advantage {
-    max-width: 480px;
-    display: flex;
-    gap: 16px;
-
-    & + .advantage {
-      margin-top: 48px;
+    @include respond-to(768) {
+      margin-bottom: 0;
     }
-
-    .services-image {
-      align-self: baseline;
-    }
-  }
-
-  .advantage-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 8px;
-    margin-bottom: 8px;
-  }
-}
-
-.advantages-cover-img {
-  width: 50%;
-  margin-right: -60px;
-
-  img {
-    height: auto;
-  }
-
-  @include respond-to(768) {
-    width: auto;
-    margin-right: 0;
   }
 }
 

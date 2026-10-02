@@ -12,25 +12,24 @@
 // Typo
 @import "./typography/typography";
 
-// Pages
-@import "./pages/contact-us";
-
 // Layout
 @import "./layout/layout";
 
 // Partials
-@import "./partials/navigation";
-@import "./partials/advantages";
-@import "./partials/services";
-@import "./partials/feature-label";
-@import "./partials/orange";
-@import "./partials/cover";
-@import "./partials/footer";
-@import "./partials/customer-cases";
-@import "./partials/modal";
-@import "./partials/testimonials";
-@import "./partials/contact-section";
-@import "./partials/contact-form";
+@import './partials/navigation';
+@import './partials/feature-list';
+@import './partials/tabbed-list';
+@import './partials/advantages';
+@import './partials/services';
+@import './partials/feature-label';
+@import './partials/orange';
+@import './partials/cover';
+@import './partials/footer';
+@import './partials/customer-cases';
+@import './partials/modal';
+@import './partials/testimonials';
+@import './partials/contact-section';
+@import './partials/contact-form';
 
 // Single
 @import "./single/contact-completed";

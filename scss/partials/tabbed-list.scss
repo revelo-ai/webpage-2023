@@ -1,0 +1,149 @@
+// Layout: sticky tabs nav, items with side images
+.tabbed-list {
+  .tabbed-list-nav-inner-wrapper {
+    margin: 0 -30px;
+    padding: 0 30px;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--tabs-border-color);
+    transition: all 0.15s ease-out;
+  }
+
+  .tabbed-list-nav {
+    background: var(--tabs-background);
+    backdrop-filter: blur(2px);
+    z-index: 1;
+
+    &.sticky {
+      position: sticky;
+      top: 0;
+    }
+
+    a {
+      display: inline-block;
+      font-size: 16px;
+      text-decoration: none;
+      color: var(--tabs-link-color);
+      padding: 10px 18px;
+      border-radius: 12px;
+      transition: all 0.5s;
+      font-weight: 500;
+
+      &.active {
+        background: var(--brand-color);
+        color: #fff;
+      }
+    }
+
+    @include respond-to(768) {
+      display: none;
+    }
+  }
+
+  .tabbed-list-item {
+    display: flex;
+    padding: 48px 0 0;
+    align-items: center;
+    scroll-margin-top: 92px;
+
+    @include respond-to(768) {
+      scroll-margin-top: 0;
+    }
+
+    &:nth-child(1) {
+      padding-top: 76px;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+    }
+
+    .tabbed-list-item-subtitle {
+      margin-bottom: 24px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #363f72;
+    }
+
+    p {
+      max-width: 384px;
+
+      & + p {
+        margin-top: 16px;
+      }
+    }
+
+    .tabbed-list-item-links {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      a {
+        color: var(--brand-color);
+        font-weight: 500;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .left {
+      width: 384px;
+      flex-shrink: 0;
+
+      @include respond-to(768) {
+        width: auto;
+      }
+    }
+
+    .right {
+      margin-left: 135px;
+      position: relative;
+      flex: 1;
+      min-width: 0;
+
+      @include respond-to(1024) {
+        margin-left: 20px;
+      }
+    }
+
+    @include respond-to(768) {
+      display: block;
+    }
+  }
+
+  .container {
+    @include respond-to(768) {
+      padding: 0 32px;
+    }
+  }
+
+  .tabbed-list-image-wrapper {
+    position: relative;
+    max-width: 590px;
+  }
+
+  .tabbed-list-extra-image {
+    position: absolute;
+    top: 8%;
+    left: 38%;
+    width: 100%;
+    height: auto;
+
+    @include respond-to(768) {
+      display: none;
+    }
+  }
+
+  .tabbed-list-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 590px;
+  }
+}

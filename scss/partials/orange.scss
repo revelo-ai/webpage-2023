@@ -8,8 +8,33 @@
         margin-bottom: 20px;
     }
 
+    .orange-subheading {
+        margin: -12px 0 20px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #363f72;
+    }
+
     .subtitle {
         margin: 0 auto 32px;
+    }
+
+    .orange-link {
+        color: var(--brand-color);
+        font-weight: 500;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .orange-section {
+        margin-top: 64px;
+
+        .orange-subheading {
+            margin-top: 0;
+        }
     }
 
     .container {

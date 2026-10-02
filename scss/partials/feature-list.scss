@@ -1,0 +1,55 @@
+// Layout: leading paragraph, list of items with icons, side cover image
+.feature-list-wrapper {
+  display: flex;
+  align-items: center;
+
+  @include respond-to(768) {
+    flex-direction: column;
+  }
+}
+
+.feature-list {
+  padding: 96px 0;
+  width: 50%;
+
+  @include respond-to(768) {
+    padding: 66px 0 36px;
+    width: auto;
+  }
+
+  .feature-item {
+    max-width: 480px;
+    display: flex;
+    gap: 16px;
+
+    & + .feature-item {
+      margin-top: 48px;
+    }
+
+    .feature-item-icon {
+      align-self: baseline;
+      flex-shrink: 0;
+    }
+  }
+
+  .feature-item-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+.feature-list-cover-img {
+  width: 50%;
+  margin-right: -60px;
+
+  img {
+    height: auto;
+  }
+
+  @include respond-to(768) {
+    width: auto;
+    margin-right: 0;
+  }
+}

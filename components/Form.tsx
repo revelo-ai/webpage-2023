@@ -19,7 +19,7 @@ export default function Form({ dictionary }: { dictionary: ITranslations }) {
   const { error, success, loading, onSubmit } = usePostForm(formRef);
 
   return (
-    <div className="section section-contact">
+    <div id="contact" className="section section-contact">
       <div className="container">
         <fieldset disabled={success || loading}>
           <form
@@ -30,8 +30,7 @@ export default function Form({ dictionary }: { dictionary: ITranslations }) {
             <h2>{form.title}</h2>
 
             <div className="subtitle">
-              {form.content}{" "}
-              <a href="mailto:info@revelo.bi">info@revelo.bi</a>
+              {form.content}
             </div>
 
             {/* For emailjs */}
