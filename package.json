@@ -9,11 +9,14 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@formatjs/intl-localematcher": "^0.4.2",
     "negotiator": "^0.6.3",
-    "next": "14.0.1",
+    "next": "14.2.35",
     "prettier": "^3.1.0",
     "react": "^18",
     "react-dom": "^18",
@@ -28,7 +31,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.0.1",
+    "eslint-config-next": "14.2.35",
     "imagemin": "^8.0.1",
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-pngquant": "^9.0.2",

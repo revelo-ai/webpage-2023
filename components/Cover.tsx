@@ -5,7 +5,7 @@ import AboutHeroImage from "@images/about-hero.webp";
 import HeroImage from "@images/hero-image-2x.webp";
 import HeroImageMobile from "@images/hero-image-2x_2_966x695.webp";
 import Image from "next/image";
-import { unstable_getImgProps as getImgProps } from "next/image";
+import { getImageProps as getImgProps } from "next/image";
 import FeatureLabel from "./FeatureLabel";
 
 function CoverImage({ page }: { page: "home" | "about" }) {
@@ -109,9 +109,11 @@ export default function Cover({
             ))}
         </div>
 
-        <aside className="cover-aside">
-          <p>{dictionaryForCover.aside}</p>
-        </aside>
+        {dictionaryForCover.aside && (
+          <aside className="cover-aside">
+            <p>{dictionaryForCover.aside}</p>
+          </aside>
+        )}
       </div>
     </section>
   );

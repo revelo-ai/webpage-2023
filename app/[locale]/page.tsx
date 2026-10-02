@@ -3,7 +3,7 @@ import { Locale, i18n } from "@/i18n-config";
 import Cover from "@/components/Cover";
 import Services from "@/components/Services";
 import Orange from "@/components/Orange";
-import Advantages from "@/components/Advantages";
+import SelectedWork from "@/components/SelectedWork";
 import Form from "@/components/Form";
 
 export async function generateStaticParams() {
@@ -22,7 +22,7 @@ export default async function Home({
       <Cover dictionaryForCover={dictionary.homeCover} page="home" />
       <Services dictionary={dictionary} />
       <Orange dictionary={dictionary} />
-      <Advantages dictionary={dictionary} />
+      <SelectedWork dictionary={dictionary} />
       <Form dictionary={dictionary} />
     </main>
   );

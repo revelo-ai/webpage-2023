@@ -61,7 +61,7 @@ export default function Navigation({ dictionary, locale }: any) {
 
         <NavLink
           className="cta-button"
-          href={`/${locale}/contact-us`}
+          href={`/${locale}#contact`}
           setNavOpened={setNavOpened}
         >
           {dictionary.navigation.cta}

@@ -20,6 +20,10 @@ export default function Footer({ dictionary }: { dictionary: ITranslations }) {
           </div>
 
           <div className="footer-links">
+            <a className="footer-email" href="mailto:info@revelo.bi">
+              info@revelo.bi
+            </a>
+
             <div className="social">
               <a
                 href="https://www.linkedin.com/company/revelo-d-o-o-/"

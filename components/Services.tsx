@@ -1,88 +1,36 @@
-"use client";
-
-import { ITranslations } from "@/i18n/get-dictionary";
-import slugify from "slugify";
-import BlobImage from "@images/services-blob.svg";
-import Image1 from "@images/consulting-squareimg.webp";
-import Image2 from "@images/prototyping-squareimg.webp";
-import Image3 from "@images/integrated-squareimg.webp";
-import Image4 from "@images/training-squareimg.webp";
 import Image from "next/image";
-import React from "react";
-import { useInView } from "react-intersection-observer";
-import FeatureLabel from "./FeatureLabel";
+import { ITranslations } from "@/i18n/get-dictionary";
+import coverImage from "@images/advantages-cover.webp";
+import Icon1 from "@images/advantages1.svg";
+import Icon2 from "@images/advantages2.svg";
+import Icon3 from "@images/integrated-icon.svg";
+import Icon4 from "@images/advantages3.svg";
 
-const SideImage = ({ index }: { index: number }) => {
-  const sideImage = React.useMemo(() => {
+import React from "react";
+
+const ServiceIcon = ({ index }: { index: number }) => {
+  const icon = React.useMemo(() => {
     switch (index) {
       default:
       case 0:
-        return Image1;
+        return Icon1;
       case 1:
-        return Image2;
+        return Icon2;
       case 2:
-        return Image3;
+        return Icon3;
       case 3:
-        return Image4;
+        return Icon4;
     }
   }, [index]);
 
   return (
     <Image
-      className="services-image"
-      src={sideImage.src}
-      width={sideImage.width}
-      height={sideImage.height}
+      className="feature-item-icon"
+      src={icon.src}
+      width={icon.width}
+      height={icon.height}
       alt=""
     />
-  );
-};
-
-const Service = ({
-  service,
-  index,
-  setServicesInView,
-}: {
-  service: any;
-  index: number;
-  setServicesInView: React.Dispatch<React.SetStateAction<number[]>>;
-}) => {
-  const { ref, inView } = useInView({ threshold: 0.35 });
-
-  React.useEffect(() => {
-    setServicesInView((v) =>
-      inView ? [...v, index] : v.filter((i) => i !== index)
-    );
-  }, [inView, index, setServicesInView]);
-
-  return (
-    <div
-      key={service.title}
-      ref={ref}
-      id={slugify(service.title)}
-      className="service"
-    >
-      <div className="left">
-        <h3>{service.title}</h3>
-        <p>{service.content}</p>
-      </div>
-      <div className="right">
-        {index === 0 && (
-          <Image
-            className="services-extra-image"
-            src={BlobImage.src}
-            width={702}
-            height={621}
-            alt=""
-          />
-        )}
-
-        <SideImage index={index} />
-        {service.featureLabels.map((l: any) => (
-          <FeatureLabel key={l.text} text={l.text} x={l.x} y={l.y} />
-        ))}
-      </div>
-    </div>
   );
 };
 
@@ -92,43 +40,31 @@ export default function Services({
   dictionary: ITranslations;
 }) {
   const { services } = dictionary;
-  const [servicesInView, setServicesInView] = React.useState<number[]>([]);
-  const lowestServiceInView = React.useMemo(() => {
-    return servicesInView.sort()[0];
-  }, [servicesInView]);
 
   return (
     <section className="section section-services">
       <div className="container">
         <h2>{services.title}</h2>
-      </div>
 
-      <div className="services-nav sticky" data-services-nav>
-        <div className="container">
-          <div className="services-nav-inner-wrapper">
+        <div className="subtitle">{services.subtitle}</div>
+
+        <div className="feature-list-wrapper">
+          <div className="feature-list">
             {services.services.map((s, index) => (
-              <a
-                key={s.title}
-                className={lowestServiceInView === index ? "active" : ""}
-                href={`#${slugify(s.title)}`}
-              >
-                {s.title}
-              </a>
+              <div key={s.title} className="feature-item">
+                <ServiceIcon index={index} />
+
+                <div>
+                  <div className="feature-item-title">{s.title}</div>
+                  <div className="feature-item-content">{s.content}</div>
+                </div>
+              </div>
             ))}
           </div>
-        </div>
-      </div>
 
-      <div className="container">
-        <div>
-          {services.services.map((s, index) => (
-            <Service
-              key={s.title}
-              service={s}
-              index={index}
-              setServicesInView={setServicesInView}
-            />
-          ))}
+          <div className="feature-list-cover-img">
+            <Image {...coverImage} alt="" />
+          </div>
         </div>
       </div>
     </section>
