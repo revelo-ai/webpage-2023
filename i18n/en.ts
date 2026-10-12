@@ -225,6 +225,11 @@ const translations = {
     msg: "What are you working on?",
     msg_placeholder: "Enter your message...",
     button: "Send message",
+    sending: "Sending...",
+    success_title: "Message sent!",
+    send_another: "Send another message",
+    required: "This field is required.",
+    invalid_email: "Please enter a valid e-mail address.",
     error: "Something went wrong. Please try again or email us directly.",
     success:
       "Thank you for contacting us. We will get back to you as soon as possible.",

@@ -225,6 +225,11 @@ const translations = {
     msg: "Na čem delate?",
     msg_placeholder: "Vpišite svoje sporočilo ...",
     button: "Pošlji sporočilo",
+    sending: "Pošiljanje ...",
+    success_title: "Sporočilo je bilo poslano!",
+    send_another: "Pošlji novo sporočilo",
+    required: "To polje je obvezno.",
+    invalid_email: "Vpišite veljaven e-poštni naslov.",
     error: "Prišlo je do napake. Poskusite znova ali nam pišite neposredno.",
     success:
       "Hvala, ker ste nas kontaktirali. Odgovorili vam bomo v najkrajšem možnem času.",
