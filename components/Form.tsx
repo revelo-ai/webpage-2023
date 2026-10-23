@@ -5,6 +5,12 @@ import React, { useRef } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 type Inputs = {
   user_first_name: string;
   user_last_name: string;
@@ -156,6 +162,7 @@ export const usePostForm = (
   const onSubmit: SubmitHandler<Inputs> = React.useCallback(async () => {
     if (!formRef.current) return;
 
+    window.gtag?.("event", "form_submit", { form_id: "contact" });
     setLoading(true);
     setSuccess(false);
     setError(false);
@@ -169,6 +176,7 @@ export const usePostForm = (
       );
       reset();
       setSuccess(true);
+      window.gtag?.("event", "generate_lead", { form_id: "contact" });
     } catch {
       setError(true);
     } finally {
